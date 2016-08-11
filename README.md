@@ -1,7 +1,7 @@
 # SwiftyAvatar
 > A `UIImageView` class for creating **circular or rounded avatar images**, IBDesignable to make all changes via storyboard
 
-[![2.0](https://img.shields.io/badge/Swift-2.0-orange.svg)](https://developer.apple.com/swift/)
+[![2.0](https://img.shields.io/badge/Swift-3.0-orange.svg)](https://developer.apple.com/swift/)
 [![Build Status][travis-image]][travis-url]
 [![Apache](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![CocoaPods Compatible](https://img.shields.io/badge/Pod-1.0-blue.svg)](https://img.shields.io/badge/Pod-1.0-blue.svg)
@@ -24,7 +24,7 @@ You can see the changes in storyboard because SwiftyAvatar is @IBDesignable!
 ## Requirements
 
 - iOS 8.0+
-- Xcode 7.3
+- Xcode 8
 
 ## Installation
 
