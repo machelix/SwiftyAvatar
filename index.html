@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Swiftyavatar by dkalaitzidis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Swiftyavatar</h1>
+      <h2 class="project-tagline">iOS Swift avatar images with ease!</h2>
+      <a href="https://github.com/dkalaitzidis/SwiftyAvatar" class="btn">View on GitHub</a>
+      <a href="https://github.com/dkalaitzidis/SwiftyAvatar/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/dkalaitzidis/SwiftyAvatar/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="swiftyavatar" class="anchor" href="#swiftyavatar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SwiftyAvatar</h1>
+
+<p>iOS Swift avatar images with ease!</p>
+
+<blockquote>
+<p>A <code>UIImageView</code> class for creating <strong>circular or rounded avatar images</strong>, IBDesignable to make all changes via storyboard</p>
+</blockquote>
+
+<p><a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-2.0-orange.svg" alt="2.0"></a>
+<a href="https://travis-ci.org/dbader/node-datadog-metrics"><img src="https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square" alt="Build Status"></a>
+<a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/hexpm/l/plug.svg" alt="Apache"></a>
+<a href="https://img.shields.io/badge/Pod-1.0-blue.svg"><img src="https://img.shields.io/badge/Pod-1.0-blue.svg" alt="CocoaPods Compatible"></a></p>
+
+<p>SwiftyAvatar let's you create easily rounded or circular avatar images.</p>
+
+<p>Simply change the UIImageView with SwiftyAvatar class and adjust the available properties.</p>
+
+<p>You can see the changes in storyboard because SwiftyAvatar is @IBDesignable!</p>
+
+<p><img src="http://kalai.gr/wp-content/uploads/2016/08/SwiftyAvatar-After-169x300.png" alt="Alt text"></p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>[x] @IBDesignable</li>
+<li>[x] Border Width &amp; Color</li>
+<li>[x] Background Color (if the image has trasparent background)</li>
+<li>[x] Spin animation</li>
+</ul>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>iOS 8.0+</li>
+<li>Xcode 7.3</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<h4>
+<a id="cocoapods" class="anchor" href="#cocoapods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CocoaPods</h4>
+
+<p>You can use <a href="http://cocoapods.org/">CocoaPods</a> to install <code>SwiftyAvatar</code> by adding it to your <code>Podfile</code>:</p>
+
+<div class="highlight highlight-source-ruby"><pre>platform <span class="pl-c1">:ios</span>, <span class="pl-s"><span class="pl-pds">'</span>8.0<span class="pl-pds">'</span></span>
+use_frameworks!
+pod <span class="pl-s"><span class="pl-pds">'</span>SwiftyAvatar<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>~&gt; 1.0<span class="pl-pds">'</span></span></pre></div>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">import</span> <span class="pl-c1">UIKit</span>
+<span class="pl-k">import</span> <span class="pl-c1">SwiftyAvatar</span></pre></div>
+
+<h4>
+<a id="manually" class="anchor" href="#manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manually</h4>
+
+<ol>
+<li>Download and drop <code>SwiftyAvatar.swift</code> in your project.<br>
+</li>
+<li>Congratulations!<br>
+</li>
+</ol>
+
+<h2>
+<a id="usage-example" class="anchor" href="#usage-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage example</h2>
+
+<p>From storyboard, just change the class of your 'UIImageView' to 'SwiftyAvatar' and adjust the available properties.</p>
+
+<p>With code:</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">@IBOutlet</span> <span class="pl-k">weak</span> <span class="pl-k">var</span> avatar: SwiftyAvatar<span class="pl-k">!</span>
+
+avatar<span class="pl-k">.</span>borderWidth <span class="pl-k">=</span> <span class="pl-c1">2</span><span class="pl-k">.</span><span class="pl-c1">0</span>
+avarar<span class="pl-k">.</span>borderColor <span class="pl-k">=</span> UIColor<span class="pl-k">.</span>redColor()
+avatar<span class="pl-k">.</span>roundness <span class="pl-k">=</span> <span class="pl-c1">2</span><span class="pl-k">.</span><span class="pl-c1">0</span></pre></div>
+
+<h2>
+<a id="release-history" class="anchor" href="#release-history" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release History</h2>
+
+<ul>
+<li>
+<p>1.0.1</p>
+
+<ul>
+<li>Swift 3.0 support (see swift-3 branch)</li>
+</ul>
+</li>
+<li>
+<p>1.0</p>
+
+<ul>
+<li>First release</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>We would love for you to contribute to <strong>SwiftyAvatar</strong>, check the <code>LICENSE</code> file for more info.</p>
+
+<p>Thanks to RishabhTayal (<a href="https://github.com/RishabhTayal">https://github.com/RishabhTayal</a>) for Pod &amp; Swift 3.0 support</p>
+
+<h2>
+<a id="meta" class="anchor" href="#meta" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Meta</h2>
+
+<p>Dimitrios Kalaitzidis – <a href="https://twitter.com/kalaitzidis34">@kalaitzidis34</a> – <a href="mailto:kalaitzidis34@gmail.com">kalaitzidis34@gmail.com</a></p>
+
+<p>Distributed under the Apache license. See <code>Apache License</code> for more information.</p>
+
+<p><a href="https://github.com/dkalaitzidis/">https://github.com/dkalaitzidis/SwiftyAvatar</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/dkalaitzidis/SwiftyAvatar">Swiftyavatar</a> is maintained by <a href="https://github.com/dkalaitzidis">dkalaitzidis</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
